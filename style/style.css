@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0;
+    padding: 50px 0;
     background:#fcebe0;
 }
 
@@ -54,12 +54,15 @@ body {
   width: 100%;
   display: flex;
   flex-direction:row;
-  background-color: black;
+  gap:20px;
+  justify-content: center;
+
 
 }
 
 .button {
     display: flex;
+    flex-basis: 100%;
     justify-content:space-between;
     height: 50px;
     width:100%;
@@ -72,7 +75,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 16px;
     font-weight: 500;
-    margin: 5px 0;
+    margin: 10px 0;
     font-family: 'Press Start 2P', cursive;
   }
   
@@ -130,3 +133,19 @@ body {
   .icon {
     font-size: 42px;
   }
+
+
+  @media (max-width: 775px) { 
+
+    body {
+      height: 100%;
+      padding-bottom: 50px;
+    }
+
+    .buttonBox {
+      flex-direction: column;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+   }
