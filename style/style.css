@@ -98,7 +98,6 @@ body {
   }
 
 
-  
   .buttonIcon {
     font-size: 1.5em;
     background: rgba(0, 0, 0, 0.08);
@@ -133,6 +132,14 @@ body {
     font-size: 42px;
   }
 
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
 
   @media (max-width: 775px) { 
 
@@ -153,5 +160,14 @@ body {
 
     .titleTxt {
       font-size:24px;
+    }
+
+
+    .desktop {
+      display:none;
+    }
+
+    .mobile {
+      display:block;
     }
    }
