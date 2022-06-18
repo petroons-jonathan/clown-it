@@ -72,7 +72,6 @@ body {
     outline: none;
     border-radius: 5px;
     overflow: hidden;
-    font-family: "Quicksand", sans-serif;
     font-size: 16px;
     font-weight: 500;
     margin: 10px 0;
@@ -148,4 +147,11 @@ body {
       margin: 0 auto;
     }
 
+    .button {
+      font-size: 10px;
+    }
+
+    .titleTxt {
+      font-size:24px;
+    }
    }
