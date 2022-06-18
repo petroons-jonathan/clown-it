@@ -1,4 +1,10 @@
 // Get the button in variable
+//Global
+
+let currentTrack;
+let isPlaying;
+const playPauseButton = document.getElementById("playerButton");
+
 // First Column
 const klaxon = document.getElementById("klaxon");
 const tambour = document.getElementById("tambour");
@@ -45,6 +51,9 @@ const soundManger = new Audio("media/sounds/manger-chef.mp3");
 const soundSWars = new Audio("media/sounds/March-Imperial.mp3");
 
 // Add event on click
+// Global
+
+
 // First column
 klaxon.addEventListener("click", playKlaxon);
 tambour.addEventListener("click", playTambour);
@@ -64,66 +73,124 @@ fboyard.addEventListener("click", playFBoyard);
 manger.addEventListener("click", playManger);
 starwars.addEventListener("click", playSWars);
 
+
 // Function
 // First column
 function playKlaxon() {
-  soundKlaxon.play();
+  currentTrack = soundKlaxon;
+  playTrack();
   console.log("Je suis un klaxon");
 }
 
 function playTambour() {
-  soundTambour.play();
+  currentTrack = soundTambour;
+  playTrack();
   console.log("Je suis un tambour");
 }
 
 function playOogah() {
-  soundoogah.play();
-  console.log("Je suis un oogah");
+  currentTrack = soundoogah;
+  playTrack();
+  console.log("Je suis Ougah Ougah");
 }
 
 function playRire() {
-  soundRire.play();
-  console.log("Je suis un rire");
+  currentTrack = soundRire;
+  playTrack();
+  console.log("Je suis un rire machiavélique");
 }
 
 //Ivan contribution
 // Second Column
 function playFouet() {
-  soundFouet.play();
-  console.log("Je suis un fouet");
+  currentTrack = soundFouet;
+  playTrack();
+  console.log("Je suis un fouet (non sexuel)");
 }
 
 function playVache() {
-  soundVache.play();
+  currentTrack = soundVache;
+  playTrack();
   console.log("Je suis une vache");
 }
 
 function playPunch() {
-  soundPunch.play();
-  console.log("Je suis un punch");
+  currentTrack = soundPunch;
+  playTrack();
+  console.log("Je suis One Punch Man");
 }
 
 function playWillem() {
-  soundWillem.play();
-  console.log("Je suis le cri de Willem");
+  currentTrack = soundWillem;
+  playTrack();
+  console.log("Je suis Willem");
 }
 
 // Third Column
 
 function playIndy() {
-  soundIJones.play();
+  currentTrack = soundIJones;
+  playTrack();
   console.log("Je suis un aventurier");
 }
 
 function playFBoyard() {
-  soundFBoyard.play();
+  currentTrack = soundFBoyard;
+  playTrack();
   console.log("Je suis un Boyard");
 }
 function playManger() {
-    soundManger.play();
-    console.log("Je suis un affamé");
+  currentTrack = soundManger;
+  playTrack();
+  console.log("Je suis un affamé");
 }
 function playSWars() {
-    soundSWars.play();
-    console.log("Je suis un Sith ou un Jedi mais pas Jar Jar Bin");
+  currentTrack = soundSWars;
+  playTrack();
+  console.log("Je suis un Sith ou un Jedi mais pas Jar Jar Bin");
 }
+
+function playPauseTrack() {
+  if (!isPlaying) playTrack();
+  else pauseTrack();
+}
+
+function playTrack(){
+    // Play the loaded track
+    currentTrack.play();
+    isPlaying = true;
+}
+
+function pauseTrack(){
+    // Pause the loaded track
+    currentTrack.stop();
+    isPlaying = false;
+}
+
+
+
+
+// function playpauseTrack() {
+//   // Switch between playing and pausing
+//   // depending on the current state
+//   if (!isPlaying) playTrack();
+//   else pauseTrack();
+// }
+  
+// function playTrack() {
+//   // Play the loaded track
+//   currentTrack.play();
+//   isPlaying = true;
+  
+//   // Replace icon with the pause icon
+//   klaxon.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+// }
+  
+// function pauseTrack() {
+//   // Pause the loaded track
+//   currentTrack.pause();
+//   isPlaying = false;
+  
+//   // Replace icon with the play icon
+//   klaxon.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+// }
