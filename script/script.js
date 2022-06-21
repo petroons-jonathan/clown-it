@@ -2,7 +2,7 @@
 //Global
 
 let currentTrack;
-let isPlaying;
+let isPlaying = false;
 const playPauseButton = document.getElementById("playerButton");
 
 // First Column
@@ -24,12 +24,33 @@ const fboyard = document.getElementById("fboyard");
 const manger = document.getElementById("manger");
 const starwars = document.getElementById("star");
 
+
+// Icon variable
+iconPause = '<img class="icon" src="media/img/pause.png">';
+
+iconSWars = '<img class="icon" src="media/img/lightsaber.png">';
+iconManger = '<img class="icon" src="media/img/manger.png">';
+iconFBoyard = '<img class="icon" src="media/img/fort.png">';
+iconIndy = '<img class="icon" src="media/img/adventurer.png">';
+
+iconWillem = '<img class="icon" src="media/img/willem.png">';
+iconPunch = '<img class="icon" src="media/img/punch.png">';
+iconVache = '<img class="icon" src="media/img/vache.png">';
+iconFouet = '<img class="icon" src="media/img/fouet.png">';
+
+iconRire = '<img class="icon" src="media/img/scared.png">';
+iconOogah = '<img class="icon" src="media/img/horn.png">';
+iconTambour = '<img class="icon" src="media/img/tambour.png">';
+iconKlaxon = '<img class="icon" src="media/img/klaxon.png">';
+
 // Get the music in variable
 // First Column
 const soundKlaxon = new Audio("media/sounds/klaxon.wav");
 const soundTambour = new Audio("media/sounds/tambour.wav");
 const soundoogah = new Audio("media/sounds/oogah.wav");
 const soundRire = new Audio("media/sounds/rire.wav");
+
+
 
 // Ivan contribution
 // Second Column
@@ -53,7 +74,6 @@ const soundSWars = new Audio("media/sounds/March-Imperial.mp3");
 // Add event on click
 // Global
 
-
 // First column
 klaxon.addEventListener("click", playKlaxon);
 tambour.addEventListener("click", playTambour);
@@ -73,124 +93,185 @@ fboyard.addEventListener("click", playFBoyard);
 manger.addEventListener("click", playManger);
 starwars.addEventListener("click", playSWars);
 
-
 // Function
 // First column
 function playKlaxon() {
   currentTrack = soundKlaxon;
-  playTrack();
+  currentElement = klaxon;
+  initialIcon = iconKlaxon;
+  togglePlay();
   console.log("Je suis un klaxon");
 }
 
+const endKlaxon = soundKlaxon.onended = function() {
+  klaxon.innerHTML = iconKlaxon;
+};
+
 function playTambour() {
   currentTrack = soundTambour;
-  playTrack();
+  currentElement = tambour;
+  initialIcon = iconTambour;
+  timer = currentTrack.duration;
+  togglePlay();
   console.log("Je suis un tambour");
+  console.log(timer);
 }
+
+const endTambour = soundTambour.onended = function () {
+  tambour.innerHTML = iconTambour;
+}
+
+
 
 function playOogah() {
   currentTrack = soundoogah;
-  playTrack();
+  currentElement = oogah;
+  initialIcon = iconOogah;
+  togglePlay();
   console.log("Je suis Ougah Ougah");
 }
 
+const endOogah = soundoogah.onended = function() {
+  oogah.innerHTML = iconOogah;
+};
+
 function playRire() {
   currentTrack = soundRire;
-  playTrack();
+  currentElement = rire;
+  initialIcon = iconRire;
+  togglePlay();
   console.log("Je suis un rire machiavélique");
 }
+
+const endRire = soundRire.onended = function() {
+  rire.innerHTML = iconRire;
+};
 
 //Ivan contribution
 // Second Column
 function playFouet() {
   currentTrack = soundFouet;
-  playTrack();
+  currentElement = fouet;
+  initialIcon = iconFouet;
+  togglePlay();
+
   console.log("Je suis un fouet (non sexuel)");
 }
 
+const endFouet = soundFouet.onended = function() {
+  fouet.innerHTML = iconFouet;
+};
+
 function playVache() {
   currentTrack = soundVache;
-  playTrack();
+  currentElement = vache;
+  initialIcon = iconVache;
+  togglePlay();
   console.log("Je suis une vache");
 }
 
+const endVache = soundTambour.onended = function() {
+  vache.innerHTML = iconVache;
+};
+
 function playPunch() {
   currentTrack = soundPunch;
-  playTrack();
+  currentElement = punch;
+  initialIcon = iconPunch;
+  togglePlay();
   console.log("Je suis One Punch Man");
 }
 
+const endPunch = soundPunch.onended = function() {
+  punch.innerHTML = iconPunch;
+};
+
 function playWillem() {
   currentTrack = soundWillem;
-  playTrack();
+  currentElement = willem;
+  initialIcon = iconWillem;
+  togglePlay();
   console.log("Je suis Willem");
 }
+
+const endWillem = soundWillem.onended = function() {
+  willem.innerHTML = iconWillem;
+};
 
 // Third Column
 
 function playIndy() {
   currentTrack = soundIJones;
-  playTrack();
+  currentElement = indy;
+  initialIcon = iconIndy;
+  togglePlay();
   console.log("Je suis un aventurier");
 }
 
+const endIndy = soundIJones.onended = function() {
+  indy.innerHTML = iconIndy;
+};
+
 function playFBoyard() {
   currentTrack = soundFBoyard;
-  playTrack();
+  currentElement = fboyard;
+  initialIcon = iconFBoyard;
+  togglePlay();
   console.log("Je suis un Boyard");
 }
+
+const endFBoyard = soundFBoyard.onended = function() {
+  fboyard.innerHTML = iconFBoyard;
+};
+
 function playManger() {
   currentTrack = soundManger;
-  playTrack();
+  currentElement = manger;
+  initialIcon = iconManger;
+  togglePlay();
   console.log("Je suis un affamé");
 }
+
+const endManger = soundManger.onended = function() {
+  manger.innerHTML = iconManger;
+};
+
 function playSWars() {
   currentTrack = soundSWars;
-  playTrack();
+  currentElement = starwars;
+  initialIcon = iconSWars;
+  togglePlay();
   console.log("Je suis un Sith ou un Jedi mais pas Jar Jar Bin");
 }
 
-function playPauseTrack() {
-  if (!isPlaying) playTrack();
-  else pauseTrack();
-}
+const endStar = soundSWars.onended = function() {
+  starwars.innerHTML = iconSWars;
+};
 
-function playTrack(){
-    // Play the loaded track
+function togglePlay() {
+  if (currentTrack.paused) {
     currentTrack.play();
-    isPlaying = true;
+    currentElement.innerHTML = iconPause;
+  } else {
+    currentTrack.pause();
+    // Reset the timer 
+    // currentTrack.currentTime = 0;
+    currentElement.innerHTML = initialIcon;
+  }
+
 }
 
-function pauseTrack(){
-    // Pause the loaded track
-    currentTrack.stop();
-    isPlaying = false;
-}
 
 
-
-
-// function playpauseTrack() {
-//   // Switch between playing and pausing
-//   // depending on the current state
-//   if (!isPlaying) playTrack();
-//   else pauseTrack();
+// function durationTrack(){
+//   var duration = currentTrack.duration;    // Durée totale
+//   var time     = currentTrack.currentTime; // Temps écoulé
+//   var fraction = time / duration;
+//   var percent  = Math.ceil(fraction * 100);
+  
+//   if(percent == 100){
+//     console.log("Je suis fini");
+//   }
 // }
-  
-// function playTrack() {
-//   // Play the loaded track
-//   currentTrack.play();
-//   isPlaying = true;
-  
-//   // Replace icon with the pause icon
-//   klaxon.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-// }
-  
-// function pauseTrack() {
-//   // Pause the loaded track
-//   currentTrack.pause();
-//   isPlaying = false;
-  
-//   // Replace icon with the play icon
-//   klaxon.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
-// }
+
+
