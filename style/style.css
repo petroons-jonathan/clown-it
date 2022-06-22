@@ -140,6 +140,22 @@ body {
     display: none;
   }
 
+  .quote {
+    margin-top: 40px;
+  }
+
+  .quote p {
+    font-size:24px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Rye', cursive;
+    letter-spacing: 2px;
+  }
+
+  .flip{
+    transform: rotateX(360deg);
+    transition: transform .6s;
+  }
 
   @media (max-width: 775px) { 
 
