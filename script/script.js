@@ -170,7 +170,7 @@ function playVache() {
   console.log("Je suis une vache");
 }
 
-const endVache = soundTambour.onended = function() {
+const endVache = soundVache.onended = function() {
   vache.innerHTML = iconVache;
 };
 
