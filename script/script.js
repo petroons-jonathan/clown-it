@@ -280,8 +280,7 @@ function togglePlay() {
 (function() {
   const englishQuote = ' The circus is gone, but the clowns remain ';
   const frenchQuote = ' Le cirque est parti, mais les clowns restent ';
-  const russianQuote = 'цирк уехал, клоуны остались ';
-  var word = [frenchQuote, englishQuote, russianQuote];
+  var word = [frenchQuote, englishQuote];
   var element = document.getElementById("quoteClown");
   var wordIndex = 1;
 
@@ -299,13 +298,6 @@ function togglePlay() {
         break;
 
         case 1:
-          element.classList.add('flip');
-          element.textContent = word[wordIndex];
-          wordIndex = 2;
-          setTimeout(resetAnimation, 2000);
-        break;
-
-        case 2:
           element.classList.add('flip');
           element.textContent = word[wordIndex];
           wordIndex = 0;

@@ -4,6 +4,10 @@
 /* font-family: 'Press Start 2P', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+
+/* font-family: 'Amatic SC', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 /* 
 
 color: #dab397; rose pale
@@ -150,6 +154,16 @@ body {
     font-weight: bold;
     font-family: 'Rye', cursive;
     letter-spacing: 2px;
+  }
+
+  .russian {
+    margin-top: 20px;
+    text-align: center;
+    font-size:18px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+
   }
 
   .flip{
