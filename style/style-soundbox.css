@@ -1,0 +1,204 @@
+/* font-family: 'Rye', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* font-family: 'Amatic SC', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* 
+
+color: #dab397; rose pale
+color:#3b9881; vert foncé
+color: #800F2F; rouge foncé
+
+*/
+
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+
+}
+
+body {
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+    background:#fcebe0;
+}
+
+
+.titleBox {
+    margin-bottom:10px;
+}
+
+.titleIcon {
+
+    text-align: center;
+}
+
+.titleTxt {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-family: 'Rye', cursive;
+
+}
+
+.buttonBox{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  gap:20px;
+  justify-content: center;
+
+
+}
+
+.button {
+    display: flex;
+    flex-basis: 100%;
+    justify-content:space-between;
+    height: 50px;
+    width:100%;
+    padding: 0;
+    background: #C9184A;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .buttonIcon:hover {
+    background: #800F2F;
+  }
+  
+  .buttonIcon:active {
+    background: #590D22;
+  }
+  
+
+  
+  .buttonTxt,
+  .buttonIcon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+  }
+
+
+  .buttonIcon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Rye', cursive;
+    background-color: #fcebe0;
+  }
+
+  .redClown {
+    color:#C9184A;
+  }
+
+  .blackClown{
+    color: #800F2F;
+  }
+
+  .greenClown {
+    color:#3b9881;
+  }
+
+  .icon {
+    font-size: 42px;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .quote {
+    margin-top: 40px;
+  }
+
+  .quote p {
+    text-align: center;
+    font-size:24px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Rye', cursive;
+    letter-spacing: 2px;
+  }
+
+  .russian {
+    margin-top: 20px;
+    text-align: center;
+    font-size:18px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+  }
+
+  .flip{
+    transform: rotateX(360deg);
+    transition: transform .6s;
+  }
+
+  @media (max-width: 775px) { 
+
+    body {
+      height: 100%;
+      padding-bottom: 50px;
+    }
+
+    .buttonBox {
+      flex-direction: column;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .button {
+      font-size: 10px;
+    }
+
+    .titleTxt {
+      font-size:24px;
+    }
+
+
+    .desktop {
+      display:none;
+    }
+
+    .mobile {
+      display:block;
+    }
+   }
