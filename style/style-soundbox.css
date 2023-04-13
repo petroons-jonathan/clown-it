@@ -17,6 +17,24 @@ color: #800F2F; rouge foncé
 */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+ --font-start: 'Press Start 2P', cursive;
+ --font-montserrat:'Montserrat', sans-serif;
+ --green:#00cc66;
+ --navy: #150578;
+ --blue:#347fc4;
+ --turquoise:#28666e;
+ --orange:#f1a208;
+ --black:#000;
+ --grey:#202020;
+ --white:#fff;
+ --red:#c9184a;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -32,13 +50,37 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 50px 0;
-    background:#fcebe0;
+    padding: 25px 0 50px 0;
+    background:var(--black);
 }
 
 
+.return {
+  color: var(--red);
+  position: absolute;
+  font-size: 48px;
+  top:5%;
+  left: 5%;
+  transition: .5s;
+  padding: 5px;
+}
+
+.return:hover {
+  transform: translateX(-20px);
+}
+
+.clown {
+  -webkit-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
+}
+
 .titleBox {
     margin-bottom:10px;
+    background: var(--grey);
+    width: 50%;
+    padding: 1%;
+    border-radius: 28px;
+
 }
 
 .titleIcon {
@@ -47,10 +89,12 @@ body {
 }
 
 .titleTxt {
+    margin-top: 20px;
     text-align: center;
-    font-size: 48px;
+    font-size: 32px;
     letter-spacing: 2px;
-    font-family: 'Rye', cursive;
+    font-family: var(--font-start);
+    color: var(--white);
 
 }
 
@@ -71,15 +115,15 @@ body {
     height: 50px;
     width:100%;
     padding: 0;
-    background: #C9184A;
+    background: var(--red);
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 14px;
     overflow: hidden;
     font-size: 16px;
     font-weight: 500;
     margin: 10px 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: var(--font-start);
   }
   
   .buttonIcon:hover {
@@ -116,17 +160,14 @@ body {
     padding: 10px 0;
     text-align: center;
     font-size: 18px;
-    font-family: 'Rye', cursive;
-    background-color: #fcebe0;
+    font-family: var(--font-start);
+    background-color: var(--black);
   }
 
-  .redClown {
-    color:#C9184A;
+  .redClown, .blackClown {
+    color:var(--red);
   }
 
-  .blackClown{
-    color: #800F2F;
-  }
 
   .greenClown {
     color:#3b9881;
@@ -153,8 +194,9 @@ body {
     font-size:24px;
     font-style: italic;
     font-weight: bold;
-    font-family: 'Rye', cursive;
+    font-family: var(--font-montserrat);
     letter-spacing: 2px;
+    color:var(--white)
   }
 
   .russian {

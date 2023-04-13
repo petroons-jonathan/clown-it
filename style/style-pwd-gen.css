@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+ --font-start: 'Press Start 2P', cursive;
+ --font-montserrat:'Montserrat', sans-serif;
+ --green:#00cc66;
+ --navy: #150578;
+ --blue:#347fc4;
+ --turquoise:#28666e;
+ --orange:#f1a208;
+ --black:#000;
+ --grey:#202020;
+ --white:#fff;
+ --red:#c9184a;
+}
 
 * {
     box-sizing: border-box;
@@ -10,21 +26,35 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: #5941a9;
+    background-color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Space Grotesk",sans-serif;
+    font-family: var(--font-start);
     color: #1d1128;
 }
 
+.return {
+    color: var(--green);
+    position: absolute;
+    font-size: 48px;
+    top:5%;
+    left: 5%;
+    transition: .5s;
+    padding: 5px;
+  }
+
+  .return:hover {
+    transform: translateX(-20px);
+  }
+
 .box {
-    background-color:#5941a9;
+    background-color:var(--green);
     padding: 20px 30px;
     border-radius: 20px;
     max-width: 500px;
-    border: #6d72c3 solid 2px;
-    box-shadow: 0px 0px 5px 2px #6d72c3;
+    border: var(--green) solid 2px;
+
 }
 
 
@@ -35,10 +65,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding:5px 10px;
     border-radius:5px;
-    background-color: #6d72c3;
+    background-color: var(--grey);
+    color: var(--white);
 }
 
 .btn {
@@ -59,16 +90,25 @@ body {
     margin-bottom: 10px;
 }
 
-.box-button {
+.box-button button {
     text-align: center;
+    font-family: var(--font-start);
+    letter-spacing: 1px;
 }
 
 .box-button button {
-    margin:10px 0;
+    margin:20px 0 10px 0;
     padding: 5px 15px;
     border-radius: 10px;
     width:100%;
     /* border: #5941a9 solid 1px;
     background-color: #e5d4ed; */
 
+}
+
+.label {
+    letter-spacing: 1px;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    color: var(--grey);
 }
